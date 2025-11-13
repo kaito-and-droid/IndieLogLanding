@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="IndieLog - Automate your build-in-public journey. Turn git commits into engaging social media posts with AI.">
+    <meta name="keywords" content="build in public, automation, developer tools, indie hacker, devlog, AI">
+    <title>IndieLog - Build in Public, Automated</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-icon">📝</span>
+                    <span class="logo-text">SoloTrack</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#demo">Demo</a>
+                    <a href="https://github.com/kaito-and-droid/IndieLog" target="_blank">GitHub</a>
+                    <a href="https://github.com/kaito-and-droid/IndieLog#installation" class="cta-button-small">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    Build in Public,<br>
+                    <span class="gradient-text">Automated.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Turn your git commits into engaging social media posts with AI.<br>
+                    One command. Zero effort. Maximum reach.
+                </p>
+                <div class="hero-cta">
+                    <a href="#get-started" class="cta-button primary">
+                        <span>Start Building</span>
+                        <span class="arrow">→</span>
+                    </a>
+                    <a href="#demo" class="cta-button secondary">
+                        <span>See Demo</span>
+                    </a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">⚡</div>
+                        <div class="stat-label">2 min setup</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">🤖</div>
+                        <div class="stat-label">AI-powered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">🐦</div>
+                        <div class="stat-label">Auto-posts</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="terminal">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="terminal-button red"></span>
+                            <span class="terminal-button yellow"></span>
+                            <span class="terminal-button green"></span>
+                        </div>
+                        <div class="terminal-title">~/my-project</div>
+                    </div>
+                    <div class="terminal-body">
+                        <div class="terminal-line">
+                            <span class="prompt">$</span>
+                            <span class="command">npx indielog run</span>
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">🚀</span> Running IndieLog pipeline...
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">✅</span> Loaded config
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">📦</span> 5 commits found
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">🧠</span> AI summary generated
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">🐦</span> Posted to X: <span class="link">x.com/...</span>
+                        </div>
+                        <div class="terminal-line output success">
+                            <span class="emoji">✨</span> Pipeline completed in 3.2s
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Everything you need to<br><span class="gradient-text">build in public</span></h2>
+                <p class="section-subtitle">Automate your developer journey from commits to community</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>One-Command Automation</h3>
+                    <p>Run once, post everywhere. IndieLog fetches commits, generates AI summaries, and publishes to your social platforms.</p>
+                    <div class="feature-tags">
+                        <span class="tag">CLI</span>
+                        <span class="tag">Fast</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🧠</div>
+                    <h3>AI-Powered Summaries</h3>
+                    <p>Choose from friendly, technical, or funny tones. OpenAI and Claude support included.</p>
+                    <div class="feature-tags">
+                        <span class="tag">GPT-4</span>
+                        <span class="tag">Claude</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">📅</div>
+                    <h3>Smart Scheduling</h3>
+                    <p>GitHub Actions integration for daily posts. Set it and forget it.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Cron</span>
+                        <span class="tag">Actions</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <h3>Beautiful CLI</h3>
+                    <p>Emoji-rich logging, progress tracking, and execution metrics. Developer experience first.</p>
+                    <div class="feature-tags">
+                        <span class="tag">UX</span>
+                        <span class="tag">TypeScript</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Type-Safe & Validated</h3>
+                    <p>Zod schema validation, TypeScript throughout. Catch errors before they happen.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Zod</span>
+                        <span class="tag">Safe</span>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">🌐</div>
+                    <h3>Multi-Platform Ready</h3>
+                    <p>X/Twitter fully supported. Reddit and Dev.to coming soon.</p>
+                    <div class="feature-tags">
+                        <span class="tag">Social</span>
+                        <span class="tag">More</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How it works</h2>
+                <p class="section-subtitle">From git commits to viral posts in 3 steps</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Code & Commit</h3>
+                        <p>Write code like you normally do. Commit your progress to git. IndieLog automatically tracks your work.</p>
+                        <div class="code-snippet">
+                            <code>git commit -m "Added user auth"</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>AI Summarizes</h3>
+                        <p>IndieLog reads your commits and uses AI to create engaging, tweet-sized summaries in your chosen style.</p>
+                        <div class="code-snippet">
+                            <code>🎉 Day 12 building MyApp!<br>✨ Added user auth<br>💪 Feeling productive<br>#buildinpublic</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Auto-Post</h3>
+                        <p>Your update gets posted to X/Twitter (and soon Reddit & Dev.to). Build your audience while you build your product.</p>
+                        <div class="code-snippet">
+                            <code>✅ Posted to X<br>📊 Reach: Growing daily</code>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See it in action</h2>
+                <p class="section-subtitle">Real example of IndieLog transforming commits into posts</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-input">
+                    <h4>📦 Your Commits</h4>
+                    <div class="commit-list">
+                        <div class="commit">
+                            <span class="commit-hash">a3b2c1d</span>
+                            <span class="commit-message">Implemented AI summarizer with OpenAI</span>
+                        </div>
+                        <div class="commit">
+                            <span class="commit-hash">e4f5g6h</span>
+                            <span class="commit-message">Added Twitter publisher integration</span>
+                        </div>
+                        <div class="commit">
+                            <span class="commit-hash">i7j8k9l</span>
+                            <span class="commit-message">Polished CLI with emoji logging</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-arrow">→</div>
+                <div class="demo-output">
+                    <h4>🐦 Your Post</h4>
+                    <div class="tweet-preview">
+                        <div class="tweet-header">
+                            <div class="tweet-avatar">👤</div>
+                            <div class="tweet-info">
+                                <div class="tweet-name">You</div>
+                                <div class="tweet-handle">@yourhandle · now</div>
+                            </div>
+                        </div>
+                        <div class="tweet-body">
+                            Day 7 of IndieLog! 🎉 Just shipped AI summarization with OpenAI, Twitter posting, and a beautiful emoji-rich CLI. The automation dream is real! #buildinpublic #indiedev
+                        </div>
+                        <div class="tweet-stats">
+                            <span>❤️ 42</span>
+                            <span>🔄 12</span>
+                            <span>💬 8</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Simple, transparent pricing</h2>
+                <p class="section-subtitle">Start free, upgrade when you need more projects</p>
+            </div>
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon">🆓</div>
+                        <h3>Free</h3>
+                        <div class="pricing-price">
+                            <span class="price">$0</span>
+                            <span class="period">/forever</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>1 project per computer</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>AI summarization</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>X/Twitter publishing</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>GitHub Actions automation</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>All CLI features</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Community support</span>
+                        </div>
+                    </div>
+                    <a href="#get-started" class="pricing-button secondary">
+                        Get Started Free
+                    </a>
+                    <p class="pricing-note">Perfect for single projects</p>
+                </div>
+
+                <!-- Pro Tier -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <div class="pricing-icon">💎</div>
+                        <h3>Pro</h3>
+                        <div class="pricing-price">
+                            <span class="price">$29</span>
+                            <span class="period">/year</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span><strong>Unlimited projects</strong></span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Everything in Free</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Priority email support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Early access to features</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Advanced analytics <span class="badge-small">Soon</span></span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Pro-only integrations <span class="badge-small">Soon</span></span>
+                        </div>
+                    </div>
+                    <a href="https://buy.stripe.com/indielog-pro" class="pricing-button primary">
+                        Upgrade to Pro
+                    </a>
+                    <p class="pricing-note">For multi-project developers</p>
+                </div>
+
+                <!-- Enterprise Tier -->
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <div class="pricing-icon">🚀</div>
+                        <h3>Enterprise</h3>
+                        <div class="pricing-price">
+                            <span class="price">Custom</span>
+                            <span class="period">/contact us</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Everything in Pro</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Unlimited team members</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>White-label options</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Custom integrations</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Dedicated support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>SLA guarantees</span>
+                        </div>
+                    </div>
+                    <a href="mailto:enterprise@indielog.dev" class="pricing-button secondary">
+                        Contact Sales
+                    </a>
+                    <p class="pricing-note">For teams & companies</p>
+                </div>
+            </div>
+
+            <div class="pricing-faq">
+                <h3>Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>Can I use Free tier commercially?</h4>
+                        <p>Yes! Free tier is available for commercial use, limited to 1 project per computer.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What happens when Pro expires?</h4>
+                        <p>You'll switch back to Free tier. Your project continues working, but new projects will be blocked.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I get a refund?</h4>
+                        <p>Yes! 30-day money-back guarantee, no questions asked.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is there a student discount?</h4>
+                        <p>Yes! 50% off Pro tier for students. Verify with your .edu email.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Get Started Section -->
+    <section id="get-started" class="get-started">
+        <div class="container">
+            <div class="get-started-content">
+                <h2 class="section-title">Ready to build in public?</h2>
+                <p class="section-subtitle">Get started in 2 minutes. Free and open source forever.</p>
+
+                <div class="installation-steps">
+                    <div class="install-step">
+                        <div class="install-number">1</div>
+                        <div class="install-content">
+                            <h4>Install IndieLog</h4>
+                            <div class="code-block">
+                                <code>npm install -g indielog</code>
+                                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="install-step">
+                        <div class="install-number">2</div>
+                        <div class="install-content">
+                            <h4>Initialize Config</h4>
+                            <div class="code-block">
+                                <code>indielog init</code>
+                                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="install-step">
+                        <div class="install-number">3</div>
+                        <div class="install-content">
+                            <h4>Run Your First Post</h4>
+                            <div class="code-block">
+                                <code>indielog run --dry-run</code>
+                                <button class="copy-button" onclick="copyCode(this)">Copy</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-buttons">
+                    <a href="https://github.com/kaito-and-droid/IndieLog" class="cta-button primary large" target="_blank">
+                        <span>⭐ Star on GitHub</span>
+                    </a>
+                    <a href="https://github.com/kaito-and-droid/IndieLog#readme" class="cta-button secondary large" target="_blank">
+                        <span>📖 Read Docs</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-icon">📝</span>
+                        <span class="logo-text">IndieLog</span>
+                    </div>
+                    <p>Build in public, automated.</p>
+                    <p class="footer-license">MIT License · Open Source</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features">Features</a>
+                        <a href="#how-it-works">How It Works</a>
+                        <a href="#demo">Demo</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/blob/main/CHANGELOG.md">Changelog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <a href="https://github.com/kaito-and-droid/IndieLog#readme">Documentation</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/blob/main/AUTOMATION.md">Automation Guide</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/blob/main/TROUBLESHOOTING.md">Troubleshooting</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/blob/main/EXAMPLE_OUTPUT.md">Examples</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Community</h4>
+                        <a href="https://github.com/kaito-and-droid/IndieLog">GitHub</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/issues">Issues</a>
+                        <a href="https://github.com/kaito-and-droid/IndieLog/discussions">Discussions</a>
+                        <a href="https://x.com/kaito_and_droid">Twitter/X</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Built with ❤️ by indie hackers, for indie hackers</p>
+                <p>© 2025 IndieLog. Made with TypeScript, OpenAI, and lots of commits.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
