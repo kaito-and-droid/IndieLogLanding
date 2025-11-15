@@ -111,6 +111,41 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// Email signup for Pro Dashboard early access
+const emailForm = document.querySelector('.email-signup');
+if (emailForm) {
+    emailForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const emailInput = this.querySelector('input[type="email"]');
+        const submitBtn = this.querySelector('button');
+        const email = emailInput.value;
+
+        if (!email) return;
+
+        // Simulate form submission
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = '✓ Added to waitlist!';
+        submitBtn.style.background = '#10b981';
+        emailInput.disabled = true;
+
+        // Reset after 3 seconds
+        setTimeout(() => {
+            submitBtn.textContent = originalText;
+            submitBtn.style.background = '';
+            emailInput.value = '';
+            emailInput.disabled = false;
+        }, 3000);
+
+        console.log('Pro Dashboard early access signup:', email);
+        // TODO: Add your API endpoint to save emails
+        // fetch('/api/waitlist', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({ email })
+        // });
+    });
+}
+
 // Track button clicks (for analytics if needed)
 document.querySelectorAll('.cta-button').forEach(button => {
     button.addEventListener('click', function() {
@@ -128,38 +163,43 @@ document.querySelectorAll('.feature-card').forEach(card => {
     });
 });
 
-// Simple mobile menu toggle (if needed later)
-function createMobileMenu() {
-    const nav = document.querySelector('.nav-links');
-    const burger = document.createElement('button');
-    burger.className = 'mobile-menu-toggle';
-    burger.innerHTML = '☰';
-    burger.style.cssText = `
-        display: none;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.5rem;
-        cursor: pointer;
-    `;
+// Mobile menu toggle - create only once
+let burgerButton = null;
+const navContent = document.querySelector('.nav-content');
+const navLinks = document.querySelector('.nav-links');
 
-    // Add responsive styles
-    if (window.innerWidth <= 768) {
-        burger.style.display = 'block';
-        document.querySelector('.nav-content').appendChild(burger);
+function initMobileMenu() {
+    // Check if burger button already exists
+    if (!burgerButton) {
+        burgerButton = document.createElement('button');
+        burgerButton.className = 'mobile-menu-toggle';
+        burgerButton.innerHTML = '☰';
+        burgerButton.style.cssText = `
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+        `;
 
-        burger.addEventListener('click', () => {
-            nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
-            nav.style.flexDirection = 'column';
-            nav.style.position = 'absolute';
-            nav.style.top = '100%';
-            nav.style.left = '0';
-            nav.style.right = '0';
-            nav.style.background = 'var(--bg-secondary)';
-            nav.style.padding = '1rem';
+        burgerButton.addEventListener('click', () => {
+            const isVisible = navLinks.style.display === 'flex';
+            navLinks.style.display = isVisible ? 'none' : 'flex';
         });
+
+        navContent.appendChild(burgerButton);
+    }
+
+    // Show/hide burger based on screen size
+    if (window.innerWidth <= 768) {
+        burgerButton.style.display = 'block';
+        navLinks.style.display = 'none';
+    } else {
+        burgerButton.style.display = 'none';
+        navLinks.style.display = 'flex';
     }
 }
 
-window.addEventListener('resize', createMobileMenu);
-createMobileMenu();
+window.addEventListener('resize', initMobileMenu);
+initMobileMenu();
