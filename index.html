@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="IndieLog - Automate your build-in-public journey. Turn git commits into engaging social media posts with AI.">
-    <meta name="keywords" content="build in public, automation, developer tools, indie hacker, devlog, AI">
+    <meta name="description" content="IndieLog - Automate your build-in-public journey. Turn git commits into engaging posts on X/Twitter, Bluesky, and Reddit with AI. Job scheduling, REST API, and multi-project support.">
+    <meta name="keywords" content="build in public, automation, developer tools, indie hacker, devlog, AI, twitter, bluesky, reddit, openai, claude">
     <title>IndieLog - Build in Public, Automated</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
             <div class="nav-content">
                 <div class="logo">
                     <span class="logo-icon">📝</span>
-                    <span class="logo-text">SoloTrack</span>
+                    <span class="logo-text">IndieLog</span>
                 </div>
                 <div class="nav-links">
                     <a href="#features">Features</a>
@@ -35,27 +35,31 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-emoji">🎉</span>
+                    <span>Free Forever CLI</span>
+                </div>
                 <h1 class="hero-title">
                     Build in Public,<br>
                     <span class="gradient-text">Automated.</span>
                 </h1>
                 <p class="hero-subtitle">
-                    Turn your git commits into engaging social media posts with AI.<br>
-                    One command. Zero effort. Maximum reach.
+                    Turn your git commits into engaging posts on X, Bluesky, and Reddit with AI.<br>
+                    <strong>CLI is completely free. Pro dashboard for teams coming soon.</strong>
                 </p>
                 <div class="hero-cta">
                     <a href="#get-started" class="cta-button primary">
-                        <span>Start Building</span>
+                        <span>📥 Install Free CLI</span>
                         <span class="arrow">→</span>
                     </a>
                     <a href="#demo" class="cta-button secondary">
-                        <span>See Demo</span>
+                        <span>See It In Action</span>
                     </a>
                 </div>
                 <div class="hero-stats">
                     <div class="stat">
-                        <div class="stat-number">⚡</div>
-                        <div class="stat-label">2 min setup</div>
+                        <div class="stat-number">🎁</div>
+                        <div class="stat-label">Forever Free</div>
                     </div>
                     <div class="stat">
                         <div class="stat-number">🤖</div>
@@ -63,7 +67,7 @@
                     </div>
                     <div class="stat">
                         <div class="stat-number">🐦</div>
-                        <div class="stat-label">Auto-posts</div>
+                        <div class="stat-label">Multi-platform</div>
                     </div>
                 </div>
             </div>
@@ -80,25 +84,28 @@
                     <div class="terminal-body">
                         <div class="terminal-line">
                             <span class="prompt">$</span>
-                            <span class="command">npx indielog run</span>
+                            <span class="command">npx indielog publish</span>
                         </div>
                         <div class="terminal-line output">
-                            <span class="emoji">🚀</span> Running IndieLog pipeline...
+                            <span class="emoji">🚀</span> Publishing devlog...
                         </div>
                         <div class="terminal-line output">
-                            <span class="emoji">✅</span> Loaded config
+                            <span class="emoji">✅</span> Config loaded
                         </div>
                         <div class="terminal-line output">
-                            <span class="emoji">📦</span> 5 commits found
+                            <span class="emoji">📦</span> 5 commits found (since today)
                         </div>
                         <div class="terminal-line output">
-                            <span class="emoji">🧠</span> AI summary generated
+                            <span class="emoji">🧠</span> AI summary generated (GPT-4o-mini)
                         </div>
                         <div class="terminal-line output">
-                            <span class="emoji">🐦</span> Posted to X: <span class="link">x.com/...</span>
+                            <span class="emoji">🐦</span> Posted to X
+                        </div>
+                        <div class="terminal-line output">
+                            <span class="emoji">🦋</span> Posted to Bluesky
                         </div>
                         <div class="terminal-line output success">
-                            <span class="emoji">✨</span> Pipeline completed in 3.2s
+                            <span class="emoji">✨</span> Published successfully in 3.4s
                         </div>
                     </div>
                 </div>
@@ -111,10 +118,11 @@
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Everything you need to<br><span class="gradient-text">build in public</span></h2>
-                <p class="section-subtitle">Automate your developer journey from commits to community</p>
+                <p class="section-subtitle">Powerful CLI features, all free. Pro dashboard coming soon for teams.</p>
             </div>
             <div class="features-grid">
                 <div class="feature-card">
+                    <div class="feature-badge free">FREE</div>
                     <div class="feature-icon">🔄</div>
                     <h3>One-Command Automation</h3>
                     <p>Run once, post everywhere. IndieLog fetches commits, generates AI summaries, and publishes to your social platforms.</p>
@@ -125,36 +133,41 @@
                 </div>
 
                 <div class="feature-card">
+                    <div class="feature-badge free">FREE</div>
                     <div class="feature-icon">🧠</div>
                     <h3>AI-Powered Summaries</h3>
-                    <p>Choose from friendly, technical, or funny tones. OpenAI and Claude support included.</p>
+                    <p>Choose from friendly, technical, or funny tones. OpenAI, Claude, and local Llama/Ollama support included.</p>
                     <div class="feature-tags">
-                        <span class="tag">GPT-4</span>
+                        <span class="tag">GPT-4o</span>
                         <span class="tag">Claude</span>
+                        <span class="tag">Llama</span>
                     </div>
                 </div>
 
                 <div class="feature-card">
+                    <div class="feature-badge free">FREE</div>
                     <div class="feature-icon">📅</div>
-                    <h3>Smart Scheduling</h3>
-                    <p>GitHub Actions integration for daily posts. Set it and forget it.</p>
+                    <h3>Job Queue & Scheduling</h3>
+                    <p>Built-in job system with daily/weekly scheduling. GitHub Actions support with auto-generated workflows.</p>
                     <div class="feature-tags">
-                        <span class="tag">Cron</span>
-                        <span class="tag">Actions</span>
+                        <span class="tag">Queue</span>
+                        <span class="tag">Retry</span>
                     </div>
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🎨</div>
-                    <h3>Beautiful CLI</h3>
-                    <p>Emoji-rich logging, progress tracking, and execution metrics. Developer experience first.</p>
+                    <div class="feature-badge free">FREE</div>
+                    <div class="feature-icon">🌐</div>
+                    <h3>REST API Server</h3>
+                    <p>Full HTTP API with Server-Sent Events. Real-time logs, job management, and multi-project support.</p>
                     <div class="feature-tags">
-                        <span class="tag">UX</span>
-                        <span class="tag">TypeScript</span>
+                        <span class="tag">API</span>
+                        <span class="tag">SSE</span>
                     </div>
                 </div>
 
                 <div class="feature-card">
+                    <div class="feature-badge free">FREE</div>
                     <div class="feature-icon">🔒</div>
                     <h3>Type-Safe & Validated</h3>
                     <p>Zod schema validation, TypeScript throughout. Catch errors before they happen.</p>
@@ -165,12 +178,13 @@
                 </div>
 
                 <div class="feature-card">
-                    <div class="feature-icon">🌐</div>
-                    <h3>Multi-Platform Ready</h3>
-                    <p>X/Twitter fully supported. Reddit and Dev.to coming soon.</p>
+                    <div class="feature-badge free">FREE</div>
+                    <div class="feature-icon">🌍</div>
+                    <h3>Multi-Platform Publishing</h3>
+                    <p>X/Twitter, Bluesky fully supported. Reddit integration ready. LinkedIn and Dev.to coming soon.</p>
                     <div class="feature-tags">
-                        <span class="tag">Social</span>
-                        <span class="tag">More</span>
+                        <span class="tag">X</span>
+                        <span class="tag">Bluesky</span>
                     </div>
                 </div>
             </div>
@@ -211,9 +225,9 @@
                     <div class="step-number">3</div>
                     <div class="step-content">
                         <h3>Auto-Post</h3>
-                        <p>Your update gets posted to X/Twitter (and soon Reddit & Dev.to). Build your audience while you build your product.</p>
+                        <p>Your update gets posted to X/Twitter and Bluesky (Reddit ready, LinkedIn and Dev.to coming soon). Build your audience while you build your product.</p>
                         <div class="code-snippet">
-                            <code>✅ Posted to X<br>📊 Reach: Growing daily</code>
+                            <code>✅ Posted to X<br>✅ Posted to Bluesky<br>📊 Reach: Growing daily</code>
                         </div>
                     </div>
                 </div>
@@ -275,15 +289,15 @@
     <section id="pricing" class="pricing">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Simple, transparent pricing</h2>
-                <p class="section-subtitle">Start free, upgrade when you need more projects</p>
+                <h2 class="section-title">Free CLI, Optional Pro Dashboard</h2>
+                <p class="section-subtitle">Use the CLI forever for free. Pro dashboard for teams & advanced features</p>
             </div>
             <div class="pricing-grid">
-                <!-- Free Tier -->
+                <!-- Free CLI Tier -->
                 <div class="pricing-card">
                     <div class="pricing-header">
-                        <div class="pricing-icon">🆓</div>
-                        <h3>Free</h3>
+                        <div class="pricing-icon">🎁</div>
+                        <h3>CLI Free</h3>
                         <div class="pricing-price">
                             <span class="price">$0</span>
                             <span class="period">/forever</span>
@@ -292,7 +306,7 @@
                     <div class="pricing-features">
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>1 project per computer</span>
+                            <span>All CLI features forever</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
@@ -300,15 +314,19 @@
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>X/Twitter publishing</span>
+                            <span>Multi-platform publishing</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>GitHub Actions automation</span>
+                            <span>Job scheduling & automation</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>All CLI features</span>
+                            <span>GitHub Actions support</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>REST API server</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
@@ -318,115 +336,134 @@
                     <a href="#get-started" class="pricing-button secondary">
                         Get Started Free
                     </a>
-                    <p class="pricing-note">Perfect for single projects</p>
+                    <p class="pricing-note">Perfect for solo indie hackers</p>
                 </div>
 
-                <!-- Pro Tier -->
+                <!-- Pro Dashboard Tier -->
                 <div class="pricing-card featured">
-                    <div class="popular-badge">Most Popular</div>
+                    <div class="popular-badge">Coming Soon</div>
                     <div class="pricing-header">
                         <div class="pricing-icon">💎</div>
-                        <h3>Pro</h3>
+                        <h3>Pro Dashboard</h3>
                         <div class="pricing-price">
-                            <span class="price">$29</span>
-                            <span class="period">/year</span>
+                            <span class="price">TBD</span>
+                            <span class="period">more details soon</span>
                         </div>
                     </div>
                     <div class="pricing-features">
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span><strong>Unlimited projects</strong></span>
+                            <span><strong>Everything in CLI Free</strong></span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>Everything in Free</span>
+                            <span>Web dashboard & analytics</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>Priority email support</span>
+                            <span>Team collaboration</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>Early access to features</span>
+                            <span>Advanced analytics & insights</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>Advanced analytics <span class="badge-small">Soon</span></span>
+                            <span>Priority support</span>
                         </div>
                         <div class="feature-item">
                             <span class="check">✓</span>
-                            <span>Pro-only integrations <span class="badge-small">Soon</span></span>
+                            <span>Early access to new features</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="check">✓</span>
+                            <span>Multi-team management</span>
                         </div>
                     </div>
-                    <a href="https://buy.stripe.com/indielog-pro" class="pricing-button primary">
-                        Upgrade to Pro
-                    </a>
-                    <p class="pricing-note">For multi-project developers</p>
-                </div>
-
-                <!-- Enterprise Tier -->
-                <div class="pricing-card">
-                    <div class="pricing-header">
-                        <div class="pricing-icon">🚀</div>
-                        <h3>Enterprise</h3>
-                        <div class="pricing-price">
-                            <span class="price">Custom</span>
-                            <span class="period">/contact us</span>
-                        </div>
-                    </div>
-                    <div class="pricing-features">
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>Everything in Pro</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>Unlimited team members</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>White-label options</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>Custom integrations</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>Dedicated support</span>
-                        </div>
-                        <div class="feature-item">
-                            <span class="check">✓</span>
-                            <span>SLA guarantees</span>
-                        </div>
-                    </div>
-                    <a href="mailto:enterprise@indielog.dev" class="pricing-button secondary">
-                        Contact Sales
-                    </a>
-                    <p class="pricing-note">For teams & companies</p>
+                    <button class="pricing-button primary disabled" disabled>
+                        Launching Soon
+                    </button>
+                    <p class="pricing-note">For teams building in public</p>
                 </div>
             </div>
 
             <div class="pricing-faq">
-                <h3>Frequently Asked Questions</h3>
+                <h3>Common Questions</h3>
                 <div class="faq-grid">
                     <div class="faq-item">
-                        <h4>Can I use Free tier commercially?</h4>
-                        <p>Yes! Free tier is available for commercial use, limited to 1 project per computer.</p>
+                        <h4>Is the CLI really free forever?</h4>
+                        <p>Yes! The IndieLog CLI is free forever with no limitations. All core features are included permanently.</p>
                     </div>
                     <div class="faq-item">
-                        <h4>What happens when Pro expires?</h4>
-                        <p>You'll switch back to Free tier. Your project continues working, but new projects will be blocked.</p>
+                        <h4>Do I need Pro to use IndieLog?</h4>
+                        <p>No! The CLI is completely free. Pro dashboard is optional for teams that want web-based management and analytics.</p>
                     </div>
                     <div class="faq-item">
-                        <h4>Can I get a refund?</h4>
-                        <p>Yes! 30-day money-back guarantee, no questions asked.</p>
+                        <h4>When is Pro dashboard launching?</h4>
+                        <p>Pro dashboard is coming soon. Early access available for supporters. Follow updates on GitHub for launch details.</p>
                     </div>
                     <div class="faq-item">
-                        <h4>Is there a student discount?</h4>
-                        <p>Yes! 50% off Pro tier for students. Verify with your .edu email.</p>
+                        <h4>Can I use CLI for commercial projects?</h4>
+                        <p>Absolutely! The free CLI is perfect for commercial projects, indie companies, and enterprises.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is there an open source license?</h4>
+                        <p>Yes! IndieLog is open source under the MIT License. You can self-host, modify, and contribute.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>What about data privacy?</h4>
+                        <p>With the CLI, you control everything locally. No data sent to our servers unless you opt-in to Pro dashboard.</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pro Dashboard Preview Section -->
+    <section class="pro-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Coming Soon:<br><span class="gradient-text">Pro Dashboard</span></h2>
+                <p class="section-subtitle">Powerful web dashboard for teams managing multiple projects</p>
+            </div>
+            <div class="pro-features-grid">
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">📊</div>
+                    <h3>Real-time Analytics</h3>
+                    <p>Track engagement metrics, reach, and performance across all your social posts in one dashboard.</p>
+                </div>
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">👥</div>
+                    <h3>Team Collaboration</h3>
+                    <p>Invite team members, manage permissions, and coordinate your build-in-public strategy together.</p>
+                </div>
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">🎯</div>
+                    <h3>Campaign Management</h3>
+                    <p>Plan, schedule, and manage multiple build-in-public campaigns across your projects.</p>
+                </div>
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">🔔</div>
+                    <h3>Smart Notifications</h3>
+                    <p>Get notified when your posts perform well or when team actions need attention.</p>
+                </div>
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">📈</div>
+                    <h3>Growth Insights</h3>
+                    <p>AI-powered recommendations to optimize your build-in-public content and audience growth.</p>
+                </div>
+                <div class="pro-feature">
+                    <div class="pro-feature-icon">🔗</div>
+                    <h3>Advanced Integrations</h3>
+                    <p>Connect with Slack, Discord, email, webhooks, and more advanced platforms.</p>
+                </div>
+            </div>
+            <div class="pro-cta">
+                <p>Join our early access list to be notified when Pro Dashboard launches.</p>
+                <form class="email-signup" onsubmit="return false;">
+                    <input type="email" placeholder="your@email.com" required>
+                    <button type="submit" class="cta-button primary">Notify Me</button>
+                </form>
             </div>
         </div>
     </section>
@@ -455,7 +492,7 @@
                         <div class="install-content">
                             <h4>Initialize Config</h4>
                             <div class="code-block">
-                                <code>indielog init</code>
+                                <code>npx indielog init</code>
                                 <button class="copy-button" onclick="copyCode(this)">Copy</button>
                             </div>
                         </div>
@@ -464,9 +501,9 @@
                     <div class="install-step">
                         <div class="install-number">3</div>
                         <div class="install-content">
-                            <h4>Run Your First Post</h4>
+                            <h4>Preview Your First Post</h4>
                             <div class="code-block">
-                                <code>indielog run --dry-run</code>
+                                <code>npx indielog preview</code>
                                 <button class="copy-button" onclick="copyCode(this)">Copy</button>
                             </div>
                         </div>
